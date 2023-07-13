@@ -1,0 +1,233 @@
+/*
+Theme Name: Les Freres Canna
+Description: Theme enfant de Jason
+Author: Jason Lambert
+Author URI: https://www.jasonlambert.gitub.io
+Template: generatepress 
+Version: 1.0
+*/
+
+/**** general settings ****/
+.wp-block-button__link{
+    border-radius: 0;
+    border:1px solid #e64e4e;
+}
+
+/**** Menu ****/
+.inside-header{
+    padding: 0;
+}
+
+#primary-menu a{
+    font-size: 1.25rem;
+}
+
+
+/***** Page Accueil *****/
+
+/* ajout padding sur les autres containers (sauf le bandeau | l'histoire | )*/
+body.home .entry-content > .wp-block-columns:not(:nth-of-type(1)):not(:nth-of-type(4)){
+    max-width: 1250px;
+    margin: 0 auto;
+    padding:25px;
+}
+
+#accueil-bandeau{
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: 
+    /* top, transparent black */ 
+    linear-gradient(
+      rgba(0, 0, 0, 0.45), 
+      rgba(0, 0, 0, 0.45)
+    ),
+    /* image bgc */
+    url(../../uploads/2023/07/elsa-olofsson-A2QKKsqcRCU-unsplash-min-1-2.webp);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#accueil-bandeau h1{
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,.3);
+}
+
+@media all and (min-width: 992px){
+#accueil-bandeau h1{
+    font-size:55px
+}
+}
+
+#accueil-bandeau hr{
+    width:25%;
+    margin: 1rem auto 2rem auto;
+    color:#e64e4e;
+}
+
+
+#accueil-meilleures-ventes h2{
+    background-color: #40BC46;
+    padding: 10px;
+}
+
+#accueil-meilleures-ventes li.wc-block-grid__product{
+    font-size:1.1rem;
+}
+#accueil-meilleures-ventes li.wc-block-grid__product .wc-block-grid__product-image img{
+    max-width: 225px;
+}
+
+#notre-histoire h2{
+    margin-top: 2rem;
+}
+#notre-histoire-columns{
+    max-width: 1250px;
+    margin: 0 auto;
+    padding:25px;
+}
+
+#nos-recompenses h2{
+    margin-top: 2rem;
+}
+
+
+/***************
+Page Blog
+***************/
+
+body.blog #main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+body.blog #main article{
+    max-width: 80%;
+    flex: 1 1 0;
+    margin-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-position: center;
+}
+
+@media all and (min-width:920px){
+    body.blog #main{
+        flex-direction: row;
+        align-items:initial;
+    }
+    body.blog #main article{
+        max-width: 45%;
+    }
+}
+
+body.blog #main article > .inside-article{
+    height: 80%;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius:10px;
+    background-color:rgba(255,255,255,.9);
+    border: 5px solid #40BC46;
+}
+
+
+body.blog #main article .post-image{
+    float: left;
+    max-width: 30%;
+    margin-right: 1.5rem;
+}
+
+/**** design bouton Lire plus ****/
+
+body.blog article .read-more {
+    margin:1rem auto;
+    max-width: 200px;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-color: transparent;
+    border: 2px solid #40BC46;
+    border-radius: 0.6em;
+    color: #40BC46;
+    cursor: pointer;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    padding: 0.8em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+  }
+  body.blog article .read-more:hover, body.blog article .read-more:focus {
+    color: #fff;
+    outline: 0;
+  }
+
+body.blog article .read-more {
+    border-color: #40BC46;
+    color: #40BC46;
+    background-image: -webkit-linear-gradient(45deg, #40BC46 50%, transparent 50%);
+    background-image: linear-gradient(45deg, #40BC46 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: all 800ms ease-in-out;
+    transition: all 800ms ease-in-out;
+  }
+  body.blog article .read-more:hover {
+    background-position: 0;
+  }
+
+  body.blog article .read-more:hover > img{
+    transform: rotateY(360deg);
+    transition: all 1.2s ease;
+  }
+
+  body.blog article .read-more > img{
+    max-width:100px;
+    margin-right: 5px;
+    transition: all .75s ease;
+  }
+/*************** 
+Article du Blog
+***************/
+
+body.single-post .featured-image{
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+@media all and (min-width:992px){
+    body.single-post .featured-image{
+        float: left;
+        margin-right: 2rem;
+    }
+}
+
+
+
+/**** Nous contacter ****/
+body.page-id-250 h2{
+    font-size:1.5rem;
+    margin-top: 2rem;
+}
+
+.wpforms-form{
+    text-align: center;
+}
+
+.wpforms-field-container{
+    max-width: 60%;
+    margin:0 auto !important;
+}
